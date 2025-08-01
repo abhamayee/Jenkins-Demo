@@ -1,4 +1,22 @@
 pipeline {
-docker {
-}
+    agent {
+        docker {
+            image 'openjdk:17-alpine'
+        }
+
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Compiling java program...'
+                sh 'javac HelloWorld.java'
+            }
+        }
+        stage('Run') {
+            steps {
+                echo 'Running java program...'
+                sh 'java HelloWorld'
+            }
+        }
+    }
 }
