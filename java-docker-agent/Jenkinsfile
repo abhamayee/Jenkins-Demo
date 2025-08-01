@@ -3,7 +3,6 @@ pipeline {
         docker {
             image 'openjdk:17-alpine'
         }
-
     }
     stages {
         stage('Build') {
