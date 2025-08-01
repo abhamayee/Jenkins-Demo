@@ -14,7 +14,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo 'Running java program...'
-                sh 'java javac java-docker-agent/HelloWorld'
+                sh 'java java-docker-agent/HelloWorld'
             }
         }
     }
