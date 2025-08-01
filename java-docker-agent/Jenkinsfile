@@ -8,13 +8,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Compiling java program...'
-                sh 'javac HelloWorld.java'
+                sh 'javac java-docker-agent/HelloWorld.java'
             }
         }
         stage('Run') {
             steps {
                 echo 'Running java program...'
-                sh 'java HelloWorld'
+                sh 'java javac java-docker-agent/HelloWorld'
             }
         }
     }
